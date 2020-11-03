@@ -1,8 +1,8 @@
 # Starter-AI
 ## Step 1: configuration files
 Add these files to the root of your repository.
-- setup.cfg — configuration for flake8 and mypy.
-- pyproject.toml — configuration for black.
+- [setup.cfg](https://github.com/bhuiyanmobasshir94/Starter-AI/blob/main/setup.cfg) — configuration for flake8 and mypy.
+- [pyproject.toml](https://github.com/bhuiyanmobasshir94/Starter-AI/blob/main/pyproject.toml) — configuration for black.
 
 ## Step 2: requirements
 Install the required libraries with
@@ -48,7 +48,7 @@ If mypy found issues — fix them.
 ## Step 6: pre-commit hook
 Running **flake8**, **black**, **mypy** manually all the time is annoying.
 There is a tool called **[pre-commit hook](https://pre-commit.com/)** that addresses the issue.
-To enable it — copy this file to your repo: *.pre-commit-config.yaml.*
+To enable it — copy this file to your repo: *[.pre-commit-config.yaml](https://github.com/bhuiyanmobasshir94/Starter-AI/blob/main/.pre-commit-config.yaml).*
 You need to install the pre-commit package on your machine with:
 ```
 pip install pre-commit
@@ -62,7 +62,7 @@ From now on, on every commit, it will run a set of checks and not allow the comm
 The main difference between the manual running of the black, flake8, mypy is that it does not beg you to fix issues, but forces you to do this. Hence, there is no waste of “willpower energy.”
 
 ## Step 7: Github Actions
-You added checks to the pre-commit hook, and you run them locally. But you need a second line of defense. You need Github to run these checks on every pull request. Way to do it is to add file *.github/workflows/ci.yaml* to the repo.
+You added checks to the pre-commit hook, and you run them locally. But you need a second line of defense. You need Github to run these checks on every pull request. Way to do it is to add file *[.github/workflows/ci.yaml](https://github.com/bhuiyanmobasshir94/Starter-AI/blob/main/.github/workflows/ci.yml)* to the repo.
 There are lines:
 ```
 - name: Install dependencies
