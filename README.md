@@ -88,3 +88,5 @@ Remember this time. In the next project, add these checks in the first commit, w
  FileNotFoundError: [Errno 2] No such file or directory: 'c:\\programdata\\anaconda3\\Lib\\venv\\scripts\\nt\\pythonw.exe'
 ```
 Just copy the files there. This is just for anaconda environment.
+
+Credit:  [Vladimir Iglovikov](https://medium.com/kaggle-blog/i-trained-a-model-what-is-next-d1ba1c560e26)
