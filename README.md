@@ -1,8 +1,8 @@
 # Starter-AI
 ## Step 1: configuration files
 Add these files to the root of your repository.
-setup.cfg — configuration for flake8 and mypy.
-pyproject.toml — configuration for black.
+- setup.cfg — configuration for flake8 and mypy.
+- pyproject.toml — configuration for black.
 
 ## Step 2: requirements
 Install the required libraries with
