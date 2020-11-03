@@ -44,3 +44,47 @@ After updating the code run mypy on the whole repo:
 mypy .
 ```
 If mypy found issues — fix them.
+
+## Step 6: pre-commit hook
+Running **flake8**, **black**, **mypy** manually all the time is annoying.
+There is a tool called **[pre-commit hook](https://pre-commit.com/)** that addresses the issue.
+To enable it — copy this file to your repo: *.pre-commit-config.yaml.*
+You need to install the pre-commit package on your machine with:
+```
+pip install pre-commit
+```
+And initialize with:
+```
+pre-commit install
+```
+You are good to go.
+From now on, on every commit, it will run a set of checks and not allow the commit to pass if something is wrong.
+The main difference between the manual running of the black, flake8, mypy is that it does not beg you to fix issues, but forces you to do this. Hence, there is no waste of “willpower energy.”
+
+## Step 7: Github Actions
+You added checks to the pre-commit hook, and you run them locally. But you need a second line of defense. You need Github to run these checks on every pull request. Way to do it is to add file *.github/workflows/ci.yaml* to the repo.
+There are lines:
+```
+- name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install black flake8 mypy
+    - name: Run black
+      run:
+        black --check .
+    - name: Run flake8
+      run: flake8
+    - name: Run Mypy
+      run: mypy retinaface
+```
+that tell GitHub what to check. I also recommend to give up the practice of pushing the code directly to the master branch. Create a new branch, modify the code, commit, push to Github, create a pull request, and merge to master. It is a standard in the industry, but it is exceptionally uncommon in the academy and among Kagglers. If you are not familiar with these tools, it may take more than 20 minutes to add them and fix errors and warnings.
+Remember this time. In the next project, add these checks in the first commit, when no code is written. From that moment, every small commit will be checked, and you will need to fix at most a couple lines of code every time: tiny overhead, excellent habit.
+
+> If following two error persit
+```
+ FileNotFoundError: [Errno 2] No such file or directory: 'c:\\programdata\\anaconda3\\Lib\\venv\\scripts\\nt\\python.exe'
+
+ FileNotFoundError: [Errno 2] No such file or directory: 'c:\\programdata\\anaconda3\\Lib\\venv\\scripts\\nt\\pythonw.exe'
+```
+Just copy the files there. This is just for anaconda environment.
