@@ -1,4 +1,6 @@
 # Starter-AI
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
 ## Step 1: configuration files
 Add these files to the root of your repository.
 - [setup.cfg](https://github.com/bhuiyanmobasshir94/Starter-AI/blob/main/setup.cfg) — configuration for flake8 and mypy.
