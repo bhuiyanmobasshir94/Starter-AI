@@ -63,6 +63,11 @@ You are good to go.
 From now on, on every commit, it will run a set of checks and not allow the commit to pass if something is wrong.
 The main difference between the manual running of the black, flake8, mypy is that it does not beg you to fix issues, but forces you to do this. Hence, there is no waste of “willpower energy.”
 
+To check all with **pre-commit** run the following:
+```
+pre-commit run --all-files
+```
+
 ## Step 7: Github Actions
 You added checks to the pre-commit hook, and you run them locally. But you need a second line of defense. You need Github to run these checks on every pull request. Way to do it is to add file *[.github/workflows/ci.yaml](https://github.com/bhuiyanmobasshir94/Starter-AI/blob/main/.github/workflows/ci.yml)* to the repo.
 There are lines:
