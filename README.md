@@ -98,4 +98,8 @@ Just copy the files there. This is just for anaconda environment.
 
 Resource: [Building and testing Python](https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-python)
 
+If this happen - pre-commit fails when setting up the black environment
+Do this `pre-commit install --install-hooks`
+Ref: [1](https://github.com/psf/black/issues/1180#issuecomment-565624865)
+
 Credit:  [Vladimir Iglovikov](https://medium.com/kaggle-blog/i-trained-a-model-what-is-next-d1ba1c560e26)
